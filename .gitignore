@@ -1,3 +1,6 @@
+# Large files in the folder
+/assets/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
