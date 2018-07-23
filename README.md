@@ -2,14 +2,13 @@
 General Assembly | Capstone project: predicting flight delays with aircrafts models and its makers
 
 
-Author: Kihoon Sohn
-July 17, 2018
+Kihoon Sohn | Data Science Immersive Student @ General Assembly | July 17, 2018
 
 ## Data Science Problem Statement
 
 Can aircraft models or makers predict flights delays, in the local market?
 
-# Executive Summary
+## Executive Summary
 
 Every year nearly 6 millions domestic passenger flights made in United States. We are certainly living in the world with air-travels. Despite the shortest travel time recorded between point A to point B, traveling with airplane requires passengers to have additional time needed before and after you are actually sitting in the aircraft; traveling to the airport, handling baggages, having security check, shopping some souvenirs and lined up for the boarding. After all, you are expecting to have your flight takes off on time to your destination. From the most recent monthly report that Bureau of Transportation Statistics, on-time performance is 80.33% for the year-to-date through April 2018.(https://www.bts.gov/content/summary-airline-time-performance-year-date-through-april-2018) In other words, one out of five you may experience any kinds of delays.
 
@@ -26,22 +25,33 @@ Since the dataset itself already contains what's the cause of its delays in five
 *Specificity is 0.9947*
 
 
+##### Disclaimer: All of the large data files ignored by `.gitignore`, therefore notebook might not reproduce same results without the datasets. Also, flightradar24 log-in credential muted for the security purpose.
 
+--------------------------------------
+## Data Science Tools and Methods Applied
+### ML (Machine Learning)
+ - Tried several models to predict.
+   - RandomForest
+   - LogisticRegression
+
+### Webscrapping
+ - To create automatic webscrapping for detailed information on the aircrafts
+   - Selenium   
 
 ## Data Acquisition
-##### (1) On-Time Performance data from the Bureau of Transportation Statistics
+### (1) On-Time Performance data from the Bureau of Transportation Statistics
  - Pulled monthly data on domestic passenger flights from the agency's website between 2013 January to 2017 December and aggregate them into one dataset.
  - Total volume of the combined dataset: 29 millions records.
- - Link: https://www.transtats.bts.gov/DL_SelectFields.asp?DB_Short_Name=On-Time&Table_ID=236
+   - Link: https://www.transtats.bts.gov/DL_SelectFields.asp?DB_Short_Name=On-Time&Table_ID=236
 
 
-##### (2) Aircraft information from flightradar24.com
+### (2) Aircraft information from flightradar24.com
  - The OTP dataset above contains aircraft tail number. Use this up-to-six-digits unique identifier of the aircraft as variable to my model.
  - Method of web-scraping: Selenium
- - Link: https://www.flightradar24.com/data/aircraft/ + {tail no}
+   - Link: https://www.flightradar24.com/data/aircraft/ + {each tail no}
 
 
-## Acknowledgements and references
+### Acknowledgements and references
 ##### (1) Ben Shaver
  - General Assembly's local instructor, Ben, helped a lot on the code challenges I had. Also, he showed his interests in this project and put a lot of his time working on the progress. I would like to acknowledge his help and dedication.
 
@@ -59,7 +69,7 @@ Since the dataset itself already contains what's the cause of its delays in five
  - Mr. Scott Cole's work also made me a lot of inspiration on this capstone project.
 
 
-# Limitations and next steps
+### Limitations and next steps
 
 - Find more accurate dataset in aircraft information
 - Bring time series analysis
@@ -70,23 +80,20 @@ Since the dataset itself already contains what's the cause of its delays in five
 ## Directory of this repository
 
 - README.md
- - Executive Summary and guide for the repository
+   - Executive Summary and guide for the repository
 
 - 00.Final_modeling.ipynb
- - contains final modelings and confusion matrix with the scores
+   - contains final modelings and confusion matrix with the scores
 
 - 01.Data Processing.ipynb
- - Import "on-time performance" from Bureau of Transportation Statistics
+   - Import "on-time performance" from Bureau of Transportation Statistics
 
 - 02.Selenium.ipynb
- - Web scrap the aircrafts information from Fllightradar24.common
- - This notebook will not work without login credential
+   - Web scrap the aircrafts information from Fllightradar24.common
+   - This notebook will not work without login credential
 
 - 03.EDA.ipynb
- - Basic EDAs on the datasets and plots
+   - Basic EDAs on the datasets and plots
 
 - 04.Feature_engineering.ipynb
- - Engineered features and variables
-
-
-## Disclaimer: All of the large data files ignored by `.gitignore`, therefore notebook might not run without the datasets. 
+   - Engineered features and variables
