@@ -20,9 +20,9 @@ I got my 29-millions-data-points-sized-file of the on-time performance for the d
 
 Since the dataset itself already contains what's the cause of its delays in five different categories, I used my target as binary classification on the delay time over 15 mins in either departure or arrival scene. Unlikely to the common conception as extreme weather will be the primary cause, late-arriving aircraft is the biggest reason of the flight delays. Therefore, I would like to gear my model with aircrafts model, manufacturer and its age, as I mentioned above. Hence I set my features as sin/cos time, distance, dummified all categorical variables, such as: day of week, carrier, airports, aircraft type, manufacturer, etc.
 
-*The baseline accuracy were 0.7728 for not delayed, 0.2271 for delayed.* In my first model with *Logistic regression*, it slightly defeat the baseline as `train set: 0.7734`, `test set: 0.7731 `. It will be improved with some more feature engineering on my dataset. The next model is *Random Forest* with max-depth = 30 and n-estimator = 14 as GridSearchCV-ed result. It turned out the both `train set: 0.9842`, `test set: 0.8493` beat the baseline.
+*The baseline accuracy were 0.7728 for not delayed, 0.2271 for delayed.* In my first model with *Logistic regression*, it slightly defeat the baseline as `train set: 0.7734`, `test set: 0.7731 `. It will be improved with some more feature engineering on my dataset. The next model is *Random Forest*, it turned out `train set: 0.9843`, `test set: 0.8498`. With GridSearchCV on RandomForest, as max-depth = 15 and n-estimator = 10, it got `train set: 0.7916`, `test set: 0.7901` beat the baseline.
 
-*Specificity is 0.9947*
+In the confusion matrix, it showed as: precision `0.8578`, sensitivity `0.1036`, accuracy `0.7925` and specificity `0.9949`.
 
 
 ##### Disclaimer: All of the large data files ignored by `.gitignore`, therefore notebook might not reproduce same results without the datasets. Also, flightradar24 log-in credential muted for the security purpose.
@@ -82,8 +82,9 @@ Since the dataset itself already contains what's the cause of its delays in five
 - README.md
    - Executive Summary and guide for the repository
 
-- 00.Final_modeling.ipynb
+- 00.Final_notebook.ipynb
    - contains final modelings and confusion matrix with the scores
+   - Final notebook with all the other notebooks below.
 
 - 01.Data Processing.ipynb
    - Import "on-time performance" from Bureau of Transportation Statistics
@@ -94,6 +95,3 @@ Since the dataset itself already contains what's the cause of its delays in five
 
 - 03.EDA.ipynb
    - Basic EDAs on the datasets and plots
-
-- 04.Feature_engineering.ipynb
-   - Engineered features and variables
