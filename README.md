@@ -4,6 +4,11 @@ General Assembly | Capstone project: predicting flight delays with aircrafts mod
 
 Kihoon Sohn | Data Science Immersive Student @ General Assembly | July 17, 2018
 
+# Presented
+ - Medium blog post: July 27, 2018   https://medium.com/@kihoon.sohn/can-aircraft-tail-number-be-a-good-predictor-of-flight-delays-116fb7a8d94e
+
+ - at DC Hack && Tell: August 14, 2018 (Round 59 - Hippopocalypse)
+
 ## Data Science Problem Statement
 
 Can aircraft models or makers predict flights delays, in the local market?
